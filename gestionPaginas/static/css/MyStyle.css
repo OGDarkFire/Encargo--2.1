@@ -1,0 +1,219 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+header, section,footer, aside, nav, article, figure, figcaption, hgroup{
+	display:flexbox;
+}
+
+h1{
+	font: bold 20px verdana, sans-serif; 
+}
+h1{
+	color: rgb(0, 0, 0)
+}
+
+h2{
+	font: bold 20px verdana, sans-serif;
+}
+h2{
+	color: white;
+}
+p{
+	color: white;
+	font: bold 18.4px arial;
+}
+h3{
+	color: rgb(0, 0, 0);
+}
+
+label{
+	color: white;
+	font: bold 15px arial;
+	height: auto;
+}
+
+article{
+	background: #e5ebc3;
+	border: 1px solid #00ffbf;
+	padding: 20px;
+	margin-bottom: 15px;
+	background-image: url(../img/fondopantalla2.jpg);
+	background-size: cover;
+	
+}
+
+#agrupar{
+	width: 90%;
+	margin: 15px auto;
+	text-align: left;
+}
+
+#cabecera{
+	text-align: center;
+	background: #FFFBB9;
+	border: 0px #999999;
+	padding: 10px;
+}
+
+#seccion{
+	width: 53%;
+	margin: 20px;
+	float: left;
+	text-align: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#columna{
+	width: 38,5%;
+	margin: 20px 0px;
+	float: left;
+	padding: 10px;
+	background: #00d9ff;
+	flex-wrap: wrap;
+}
+
+#pie{
+	clear: both;
+	background: #CCCCCC;
+	text-align: center;
+	padding: 0px;
+	border-top: 2px solid #999999;
+}
+body{
+	background-color: rgb(255, 255, 255);
+	font-family: sans-serif;
+	height:100%;
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:silver;
+	background: url(../img/Grieta.jpg);
+	background-size: cover;
+	min-width: 100%;
+  }
+
+aside{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: auto;
+}
+
+/* Menu Pagina 1 , 2 , 3*/
+#menu{
+	color: rgb(25, 0, 255);
+	font-size: auto;
+	text-align: center;
+	background: #6eff61;
+	padding: 0cm 0cm;
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQACN8rk5at4lh2lu6s2vbq9a_E8oMv28jefw&usqp=CAU");
+	background-size: 100%;
+}
+#menu li{
+	display: inline-block;
+	list-style: none;
+	padding: 10px;
+	font: bold 20px Arial;
+}
+
+/* Fin Menu Pagina 1, 2 , 3*/
+
+/* Carrusel pagina 2 */
+.slider{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	margin-top: 1%;
+	min-width: 250px;
+	display: flexbox;
+}
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+
+	animation: cambio 20s infinite;
+}
+.slider li {
+	list-style: none;
+	width: 100%;
+}
+.slider img {
+	width: 20%;
+	margin: auto;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	95% {margin-left: -300%;}
+}
+/*Fin carrusel Pagina 2*/
+
+
+/* Hacer que la pantalla se divida en 4 partes */
+html{
+	margin: 0%;
+	padding: 0%;
+	height: 100%;
+	width: 100%;
+}
+ 
+.recuadro {
+	border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	overflow:hidden;
+}
+/*Fin Recuadro de las paginas */
+
+/* Imagenes dentro de las ventanas ,Carrusel Pagina 3*/
+.slider3{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	margin-top: 0%;
+}
+.slider3 ul {
+	display: flex;
+	padding: 0;
+	width: 300%;
+	animation: cambio2 20s infinite;
+}
+.slider3 li {
+	list-style: none;
+	width: 100%;
+}
+.slider3 img {
+	width: 75%;
+	margin: auto;
+}
+@keyframes cambio2 {
+	0% {margin-left: 0;}
+	28% {margin-left: 0;}
+
+	33% {margin-left: -100%;}
+	61% {margin-left: -100%;}
+	
+	66% {margin-left: -200%;}
+	94% {margin-left: -200%;}
+	
+}
+/*Fin Carrusel Pagina 3*/
+
+
+

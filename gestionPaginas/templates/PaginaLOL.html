@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shirenk-to-fit=no ">
+	<title>Encargo Num 1</title>
+	<link rel="stylesheet" href="{% static 'css/MyStyle.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/' %}"> 
+</head>
+<body>
+	<div id="agrupar" class="col-xs-12">
+		<header id="cabecera">
+			<h1>League of Friends</h1>
+		</header>
+
+		<nav id="menu">
+			<ul>
+				<li><a href="../templates/PaginaLOL.html"> <h3 align="side">Pagina Principal</h3></a></li>
+				<li><a href="../templates/PaginaLOL2.html"> <h3 align="side">Maestrias</h3></a></li>
+				<li><a href="../templates/paginaLOL3.html"> <h3 align="side">Historial</h3></a></li>
+			</ul>			
+		</nav>
+
+		<section id="seccion">
+			<article>
+				<header>
+                    <div>
+					<hgroup>
+						<h1>Que es league of legends</h1>
+						<p>League of legends es un juego de estrategia multijugador
+							 5 contra 5 que se basa
+                            en destruir el nexo rival para ganar la partida
+						</p>
+                    </hgroup>
+                    </div>
+                    <hgroup>
+                        <h1>Fecha estreno</h1>
+                        <p>
+                            27 de octubre de 2009
+                        </p>
+                    </hgroup>
+                    <hgroup>
+                        <h1>Plataformas</h1>
+                        <p>
+                            Microsoft Windows, macOS, Mac OS Classic
+                        </p>
+                    </hgroup>
+                    <hgroup>
+                        <h1>Pagina Web</h1>
+                        <p>
+                            <a href="https://www.riotgames.com/es"> <h3 align="side">League of legends</h3>
+                            </a>
+                        </p>
+                    </hgroup><hgroup>
+                        <h1>Modos de juego</h1>
+                        <p>
+							1-Grieta del Invocador
+							2-Aram
+							3-Modo de juego Rotativo (One for all)
+                        </p>
+                    </hgroup>  
+				</header>
+			</article>
+		</section>
+		<aside id="columna">
+            <img src="../static/img/2379005.jpg" alt="League of legends" width="464"
+             height="312">
+		</aside>
+		{% block content %}
+                    
+                    
+		{% endblock %}
+		<footer id="pie" class="col-xs-12">
+			<article>
+			<form action="">
+				<h1>Formulario Para suscribirte Crack</h1>
+				<div>
+					<label>Nombre: </label>
+					<input type="text" id='Nombre'>
+				</div>
+				<div>
+					<label>Apellido: </label>
+					<input type="text" id='apellido'>
+				</div>
+				<div>
+					<label>Sexo:</label>
+					<br>
+					<label>Masculino:</label>
+					<input type="radio" name="Sexo" value="Masculino" id="Sexo">
+					<br>
+					<label>Femenino:</label>
+					<input type="radio" name="Sexo" value="Femenino" id="Sexo">
+					<br>
+					<label>Prefiero no Especificar:</label>
+					<input type="radio" name="Sexo" value="Prefiero no Especificar" id="Sexo">
+				</div>
+				<div>
+					<label>Gmail: </label>
+					<input type="text" id='Gmail'>
+				</div>
+				<div>
+					<label>Telefono: </label>
+					<input type="number" id='Telefono'>
+				</div>
+				<div>
+					<input type="submit" onclick='return enviarFormulario()' name="Guardar">
+				</div>
+			</form>
+			<div id='error'></div>
+			<script src='../static/validar/validacion.js'></script>
+			</article>
+		</footer>
+	</div>
+</body>
+
+<script>
+	function actualizar(){location.reload(true);}
+	setInterval("actualizar()",50000);
+</script>
+
+</html>
