@@ -1,0 +1,24 @@
+<html>
+<body>
+    <p>
+        Estas bucando al usuario: <strong>{{query}}</strong>
+    </p>
+
+    {% if invocadors %}
+    <p>usuario encontrado: {{invocadors|length}} invocadores</p>
+
+    <ul>
+        {% for invocador in invocadors %}
+        <li>
+            {{invocador.Usuario}} &nbsp; {{invocador.Nivel}} &nbsp; {{invocador.ChampMain}}
+        </li>
+        {% endfor %}
+
+    </ul>
+    {% else %}
+        <p>No se encuentra el usuario buscado</p>
+    {% endif %}
+
+</body>
+
+</html>

@@ -15,17 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import login
 from gestionPaginas import views
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name="Admin"),
         # localhost:8000/
     path('pagina1/', views.pagina1, name="Pagina1"),
     path('pagina2/', views.pagina2, name="Pagina2"),
     path('pagina3/', views.pagina3, name="Pagina3") ,
-    path('pagina31/', views.pagina31, name="Pagina31") ,
-    path('pagina32/', views.pagina32, name="Pagina32") ,
-    path('pagina33/', views.pagina33, name="Pagina33") ,
-    path('pagina34/', views.pagina34, name="Pagina34") ,
-    path('login/', views.login, name="Login")
+    path('buscarinvocador/', views.buscarinvocador),
+    path('buscar/', views.buscar),
+    path('login/', views.login, name="Login"),
 ]

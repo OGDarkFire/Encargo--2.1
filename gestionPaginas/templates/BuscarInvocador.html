@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shirenk-to-fit=no ">
+	<title>Encargo Num 1</title>
+	<link rel="stylesheet" href="../static/css/MyStyle.css">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/' %}"> 
+</head>
+<body>
+	<div id="agrupar" class="col-xs-12">
+		<header id="cabecera">
+			<h1>League of Friends</h1>
+		</header>
+
+		<nav id="menu">
+			<ul>
+				<li><a href="{% url 'Pagina1'%}"> <h3 align="side">Pagina Principal</h3></a></li>
+				<li><a href="{% url 'Pagina2'%}"> <h3 align="side">Maestrias</h3></a></li>
+				<li><a href="{% url 'Pagina3'%}"> <h3 align="side">Historial</h3></a></li>
+			</ul>			
+		</nav>
+
+		<section id="seccion">
+            <form action="/buscar/" method="GET"> 
+	
+                <label>Buscar Invocador: </label>
+
+                <input type="text" name="prd">
+
+                <input type="submit" value="buscar">
+            </form>
+
+        
+        
+			
+		</section>
+		
+</body>
+
+<script>
+	function actualizar(){location.reload(true);}
+	setInterval("actualizar()",50000);
+</script>
+
+</html>

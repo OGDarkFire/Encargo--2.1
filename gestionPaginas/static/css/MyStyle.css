@@ -182,7 +182,7 @@ html{
 
 /* Imagenes dentro de las ventanas ,Carrusel Pagina 3*/
 .slider3{
-	width: 100%;
+	width: 50%;
 	margin: auto;
 	overflow: hidden;
 	text-align: center;
@@ -196,10 +196,10 @@ html{
 }
 .slider3 li {
 	list-style: none;
-	width: 100%;
+	width: 50%;
 }
 .slider3 img {
-	width: 75%;
+	width: 20%;
 	margin: auto;
 }
 @keyframes cambio2 {
