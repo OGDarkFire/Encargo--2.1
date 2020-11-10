@@ -19,10 +19,14 @@
 				<li><a href="{% url 'Pagina1'%}"> <h3 align="side">Pagina Principal</h3></a></li>
 				<li><a href="{% url 'Pagina2'%}"> <h3 align="side">Maestrias</h3></a></li>
 				<li><a href="{% url 'Pagina3'%}"> <h3 align="side">Historial</h3></a></li>
+				<li><a href="{% url 'buscarinvocador'%}"> <h3 aling="side">Buscar Invocador</h3></a></li>
 			</ul>			
 		</nav>
+		<style>
+			
+		</style>
 
-		<section id="seccion">
+		<section id="seccion" >
             <form action="/buscar/" method="GET"> 
 	
                 <label>Buscar Invocador: </label>
@@ -36,6 +40,10 @@
         
 			
 		</section>
+		<aside id="columna">
+            <img src="../static/img/2379005.jpg" alt="League of legends" width="464"
+             height="312">
+		</aside>
 		
 </body>
 

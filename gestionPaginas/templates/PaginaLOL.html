@@ -19,6 +19,7 @@
 				<li><a href="{% url 'Pagina1'%}"> <h3 align="side">Pagina Principal</h3></a></li>
 				<li><a href="{% url 'Pagina2'%}"> <h3 align="side">Maestrias</h3></a></li>
 				<li><a href="{% url 'Pagina3'%}"> <h3 align="side">Historial</h3></a></li>
+				<li><a href="{% url 'buscarinvocador'%}"> <h3 align="side">Buscar Invocador</h3></a></li>
 			</ul>			
 		</nav>
 
@@ -110,8 +111,8 @@
 			</script>
 		</head>
 	
-	<body>
-		<form id="mi-formulario" action="PaginaLOL.html"> 
+	<footer>
+		<form id="Invocador" method="post">{% csrf_token %}
 	
 			<label>Formulario LOL: </label>
 	
@@ -125,7 +126,8 @@
 				<input type="text" name="ChampMain" minlength="1" required>
 			<button>Suscribirse</button>
 	
-	</body>
+		</form>
+	</footer>
 </body>
 
 <script>

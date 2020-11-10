@@ -143,7 +143,7 @@ aside{
 	width: 100%;
 }
 .slider img {
-	width: 20%;
+	width: 25%;
 	margin: auto;
 }
 
@@ -162,27 +162,9 @@ aside{
 }
 /*Fin carrusel Pagina 2*/
 
-
-/* Hacer que la pantalla se divida en 4 partes */
-html{
-	margin: 0%;
-	padding: 0%;
-	height: 100%;
-	width: 100%;
-}
- 
-.recuadro {
-	border:1px solid black;
-	width:49.5%;
-	display:inline-block;
-	height:49.5%;
-	overflow:hidden;
-}
-/*Fin Recuadro de las paginas */
-
 /* Imagenes dentro de las ventanas ,Carrusel Pagina 3*/
 .slider3{
-	width: 50%;
+	width: 100%;
 	margin: auto;
 	overflow: hidden;
 	text-align: center;
@@ -196,10 +178,10 @@ html{
 }
 .slider3 li {
 	list-style: none;
-	width: 50%;
+	width: 100%;
 }
 .slider3 img {
-	width: 20%;
+	width: 50%;
 	margin: auto;
 }
 @keyframes cambio2 {

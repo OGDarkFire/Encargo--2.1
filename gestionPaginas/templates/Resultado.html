@@ -1,20 +1,52 @@
 <html>
+<head>
+   <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shirenk-to-fit=no ">
+	<title>Encargo Num 1</title>
+	<link rel="stylesheet" href="../static/css/MyStyle.css"> 
+</head>
+
+<style>
+    #menu li {
+        color: aliceblue;
+        font: bold 20px verdana, sans-serif; 
+    }
+
+    body {
+        text-align: center;
+    }
+</style>
 <body>
+    <div id="agrupar" class="col-xs-12">
+		<header id="cabecera">
+
+			<h1>League of Friends</h1>
+		</header>
+
+		<nav id="menu">
+			<ul>
+				<li><a href="{% url 'Pagina1'%}"> <h3 align="side">Pagina Principal</h3></a></li>
+				<li><a href="{% url 'Pagina2'%}"> <h3 align="side">Maestrias</h3></a></li>
+				<li><a href="{% url 'Pagina3'%}"> <h3 align="side">Historial</h3></a></li>
+				<li><a href="{% url 'buscarinvocador'%}"> <h3 aling="side">Buscar Invocador</h3></a></li>
+			</ul>			
+		</nav>
+	</div>
     <p>
         Estas bucando al usuario: <strong>{{query}}</strong>
     </p>
 
-    {% if invocadors %}
-    <p>usuario encontrado: {{invocadors|length}} invocadores</p>
+    {% if invocador %}
+        <p>usuario encontrado: {{invocador|length}} invocadores</p>
 
-    <ul>
-        {% for invocador in invocadors %}
-        <li>
-            {{invocador.Usuario}} &nbsp; {{invocador.Nivel}} &nbsp; {{invocador.ChampMain}}
-        </li>
-        {% endfor %}
+        <ul>
+            {% for Invocador in invocador %}
+                <li>
+                    <p>{{Invocador.Usuario}} &nbsp; {{Invocador.Nivel}} &nbsp; {{Invocador.ChampMain}} </p>
+                </li>
+            {% endfor %}
 
-    </ul>
+        </ul>
     {% else %}
         <p>No se encuentra el usuario buscado</p>
     {% endif %}

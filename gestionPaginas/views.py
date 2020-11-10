@@ -4,8 +4,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as do_login
 from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponse
+from django.http import HttpResponse , HttpResponseRedirect
 from gestionPaginas.models import Invocador
+from django import forms
 
 # Create your views here.
 
@@ -18,8 +19,7 @@ def pagina2(request):
 def pagina3(request):
     return render(request, "PaginaLOL3.html")
 
-def buscarinvocador (request):
-
+def buscarinvocador(request):
     return render(request, "BuscarInvocador.html")
 
 def buscar(request):
@@ -28,12 +28,13 @@ def buscar(request):
 
         Usuarios=request.GET["prd"]
 
-        Invocadors=Invocador.objects.filter(nombre_icontains=Usuarios)
+        invocador=Invocador.objects.filter(Usuario__icontains=Usuarios)
 
-        return render(request,"BuscarInvocador.html", {"invocador": Invocadors, "query": Usuarios})
+        return render(request,"Resultado.html", {"invocador": invocador, "query": Usuarios})
     
     else:
         mensaje="Debe ingresar un usuario"
+    return HttpResponse(mensaje)
     
 
 def welcome(request):
@@ -73,3 +74,18 @@ def login(request):
 
     # Si llegamos al final renderizamos el formulario
     return render(request, "login.html", {'form': form})
+
+def contacto(request):
+    if request.method == 'POST':
+        form = Invocador(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return HttpResponseRedirect('PaginaLOL.html')
+    
+    else:
+        form = Invocador()
+    
+    return render (request, 'PaginaLOL.html', {
+    'form':form,
+    })
